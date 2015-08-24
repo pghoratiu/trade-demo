@@ -1,0 +1,23 @@
+{
+	"name":"pghoratiu/trade-processor",
+    "require": {
+        "slim/slim": "2.*",
+        "slim/views": "0.1.*",
+        "twig/twig": "1.*",
+        "fzaninotto/faker":"1.*",
+        "vlucas/spot2":"2.1.*",
+        "monolog/monolog": "1.*"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"MyCode\\": "src/"
+    	}
+    },
+	"authors": [
+		{
+			"name": "Gabriel Horatiu Petchesi",
+			"email": "pghoratiu@gmail.com",
+			"role": "Software Engineer"
+		}
+	]
+}

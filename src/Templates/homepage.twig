@@ -1,0 +1,35 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+	<h1>About</h1>
+	<p>Demo project for transaction processing</p>
+
+    <h1>Architecture</h1>
+    <p>A short description of the architecture design choices. A list of technologies used:</p>
+    <ul>
+      <li><strong>PHP 5.6</strong></li>
+      <li><strong>Slim</strong> - micro-framework</li>
+      <li><strong>Twig</strong> - php templating</li>
+      <li><strong>Faker</strong> - php library to generate fake data, used for generating random payloads</li>
+      <li><strong>Spot2</strong> - simple ORM layer built upon Doctrine\DBAL</li>
+      <li><strong>Monolog</strong> - flexible logging, for monitoring application events</li>
+    </ul>
+
+    <h3>Application Server</h3>
+    <p>
+       Provides procesing of messages via a REST endpoint. <br/>The choice was a framework with middleware 
+       handling capabilities (Slim Framework in this case).
+    </p>
+    <p>
+       There is a sample middleware in src/middleware/security/user.php which checks
+       if the user id is 200 otherwise it throws out an error.<br/>
+       Same principle can be used to implement rate limiting, monitoring ...
+    </p>
+
+    <h3>Processing</h3>
+    <p>Currently processing is done instantly, data is saved to a local sqlite database via ORM (Spot2).</p>
+    <p>Initially considered using a que system but this was problematic to setup on shared hosting so had to scrap that idea.</p>
+
+    <h3>Display</h3>
+    <p>Data is displayed via a simple table, showing the last 10 entries in the database.</p>
+{% endblock %}
