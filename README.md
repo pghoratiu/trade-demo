@@ -22,4 +22,4 @@ Setup
 Deployment
 =========
 
-Site is available on [demo.prolix.ro](http://demo.prolix.ro:8000).
+Site is available on [demo.prolix.ro](http://demo.prolix.ro).
